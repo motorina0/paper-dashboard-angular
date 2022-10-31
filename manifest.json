@@ -1,0 +1,7 @@
+{
+    "name": "My Dashboard",
+    "id": "dashboard",
+    "permissions": ["read"],
+    "icon": "dashboard",
+    "description": "Overview of the user activity"
+}

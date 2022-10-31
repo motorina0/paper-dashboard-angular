@@ -19,6 +19,18 @@ export class DashboardComponent implements OnInit{
     ngOnInit(){
       this.chartColor = "#FFFFFF";
 
+      console.log('### DashboardComponent')
+
+      const lnbitsApi = (window as any).lnbitsApiJS()
+      const wallet = { inkey: '318664f5034549cc8b6191116e1a2091' }
+			
+
+			lnbitsApi.getPayments(wallet)
+				.then((response) => {
+					console.log('### response', response)
+				})
+				.catch((error) => console.log(error));
+
       this.canvas = document.getElementById("chartHours");
       this.ctx = this.canvas.getContext("2d");
 
