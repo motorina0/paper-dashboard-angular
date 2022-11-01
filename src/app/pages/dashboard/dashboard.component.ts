@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit{
       console.log('### DashboardComponent')
 
       const lnbitsApi = (window as any).lnbitsApiJS()
-      const wallet = { inkey: '318664f5034549cc8b6191116e1a2091' }
+      const wallet = { inkey: localStorage.getItem("inkey") }
 			
 
 			lnbitsApi.getPayments(wallet)

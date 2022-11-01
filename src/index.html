@@ -48,6 +48,17 @@
               <div class="loader"></div>
           </div>
       </app-root>
+      <script>
+
+        window.addEventListener("message", (event) => {
+            const message = event.data
+            if (message.type === "init") {
+                localStorage.setItem("adminkey", message.adminkey)
+                localStorage.setItem("inkey", message.inkey)
+            }
+        }, false);
+
+    </script>
   </body>
 
 </html>
